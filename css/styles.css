@@ -1,0 +1,152 @@
+/* Material Design Style Implementation */
+:root {
+    --primary: #6200ee;
+    --primary-dark: #3700b3;
+    --secondary: #03dac6;
+    --surface: #ffffff;
+    --background: #f5f5f5;
+    --on-primary: #ffffff;
+    --on-surface: #000000;
+    --error: #b00020;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--on-surface);
+    margin: 0;
+    padding: 24px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2.125rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: var(--primary);
+}
+
+/* Principles Section */
+.principles-section {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.principle-card {
+    background: var(--surface);
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 
+                0 1px 1px 0 rgba(0,0,0,0.14), 
+                0 1px 3px 0 rgba(0,0,0,0.12);
+}
+
+.principle-card i {
+    color: var(--primary);
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.principle-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+/* Material Card Component */
+.card {
+    background: var(--surface);
+    border-radius: 4px;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 
+                0 1px 1px 0 rgba(0,0,0,0.14), 
+                0 1px 3px 0 rgba(0,0,0,0.12);
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.card-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+    gap: 8px;
+}
+
+/* Buttons */
+.button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.0892857143em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.button-contained {
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+
+.button-contained:hover {
+    background-color: var(--primary-dark);
+}
+
+.button-text {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.button-text:hover {
+    background-color: rgba(98, 0, 238, 0.04);
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: rgba(0,0,0,0.54);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button:hover {
+    background-color: rgba(0,0,0,0.04);
+}
