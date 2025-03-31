@@ -1,53 +1,268 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Material Design Style</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Art Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1578926375605-eaf7559b1458?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .gallery-img {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+    </style>
 </head>
-
 <body>
-    <main class="container">
-        <h1 class="title">Material Design Style</h1>
-        <article>
-            <section class="principles-section">
-                <h2>Key Principles of Material Design</h2>
-                <div class="principle-card">
-                    <i class="material-icons">layers</i>
-                    <h3>Material is the metaphor</h3>
-                    <p>The material is grounded in tactile reality, inspired by the study of paper and ink.</p>
-                </div>
-                <div class="principle-card">
-                    <i class="material-icons">format_bold</i>
-                    <h3>Bold, graphic, intentional</h3>
-                    <p>Elements and components like typography, grids, space, scale, color, and imagery create hierarchy.</p>
-                </div>
-                <div class="principle-card">
-                    <i class="material-icons">motion_photos_on</i>
-                    <h3>Motion provides meaning</h3>
-                    <p>Motion respects and reinforces the user as the prime mover, with transformations as key interactions.</p>
-                </div>
-            </section>
-            
-            <section id="bob" class="card">
-                <div class="card-header">
-                    <h2>Bob Ross Lorem Ipsum</h2>
-                    <button class="icon-button">
-                        <i class="material-icons">favorite_border</i>
-                    </button>
-                </div>
-                <div class="card-content">
-                    <img src="images/Bob-Ross-1.png" alt="Bob Ross painting">
-                    <p>Just make a decision and let it go. In your world you can create anything you desire. When things happen - enjoy them. They're little gifts. Be careful. You can always add more - but you can't take it away. You have to allow the paint to break to make it beautiful. We'll put a happy little bush here. If what you're doing doesn't make you happy - you're doing the wrong thing. This is your creation - and it's just as unique and special as you are. Here we're limited by the time we have. You can work and carry-on and put lots of little happy things in here. We must be quiet, soft and gentle. Making all those little fluffies that live in the clouds. You can do anything your heart can imagine.That's the way I look when I get home late; black and blue. Let your imagination be your guide. Clouds are free they come and go as they please.</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Modern Art Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#exhibitions">Exhibitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#artists">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-                    <p>All you need to paint is a few tools, a little instruction, and a vision in your mind. Happy painting, God bless. A fan brush is a fantastic piece of equipment. Use it. Make friends with it. Let all these little things happen. Don't fight them. Learn to use them. This present moment is perfect simply due to the fact you're experiencing it. Poor old tree. In nature, dead trees are just as normal as live trees. I thought today we would do a happy little picture. This is gonna be a happy little seascape. See how easy it is to create a little tree right in your world. You can't make a mistake. Anything that happens you can learn to use - and make something beautiful out of it. I sincerely wish for you every possible joy life could bring.</p>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold">Modern Art Gallery</h1>
+            <p class="lead">Discover contemporary masterpieces from emerging and established artists</p>
+            <a href="#exhibitions" class="btn btn-primary btn-lg mt-3">View Current Exhibitions</a>
+        </div>
+    </section>
 
-                    <p>Imagination is the key to painting. You gotta think like a tree. Everything's not great in life, but we can still find beauty in it. We'll take a little bit of Van Dyke Brown. That's what painting is all about. It should make you feel good when you paint. Exercising the imagination, experimenting with talents, being creative; these things, to me, are truly the windows to your soul. Everybody's different. Trees are different. Let them all be individuals. I spend a lot of time walking around in the woods and talking to trees, and squirrels, and little rabbits and stuff. The very fact that you're aware of suffering is enough reason to be overjoyed that you're alive and can experience it. Look around, look at what we have. Beauty is everywhere, you only have to look to see it. You can do anything here - the only pre-requisite is that it makes you happy. Van Dyke Brown is a very nice brown, it's almost like a chocolate brown.</p>
+    <!-- Current Exhibitions -->
+    <section class="py-5" id="exhibitions">
+        <div class="container">
+            <h2 class="text-center mb-5">Current Exhibitions</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1666&q=80" class="card-img-top" alt="Abstract Colors">
+                        <div class="card-body">
+                            <h5 class="card-title">Abstract Dimensions</h5>
+                            <p class="card-text">Explore the vibrant world of abstract expressionism through bold colors and dynamic compositions.</p>
+                            <p class="text-muted">June 15 - August 30, 2023</p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </article>
-    </main>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1705&q=80" class="card-img-top" alt="Sculpture Exhibit">
+                        <div class="card-body">
+                            <h5 class="card-title">Form & Space</h5>
+                            <p class="card-text">Contemporary sculptures that challenge our perception of form, space, and materiality.</p>
+                            <p class="text-muted">July 1 - September 15, 2023</p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" class="card-img-top" alt="Digital Art">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Frontiers</h5>
+                            <p class="card-text">Cutting-edge digital art exploring the intersection of technology and human creativity.</p>
+                            <p class="text-muted">August 10 - October 30, 2023</p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artists -->
+    <section class="py-5 bg-light" id="artists">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Artists</h2>
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" class="rounded-circle mb-3" width="150" height="150" alt="Artist 1">
+                    <h4>Marcus Chen</h4>
+                    <p class="text-muted">Mixed Media</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" class="rounded-circle mb-3" width="150" height="150" alt="Artist 2">
+                    <h4>Sophia Rodriguez</h4>
+                    <p class="text-muted">Sculpture</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" class="rounded-circle mb-3" width="150" height="150" alt="Artist 3">
+                    <h4>Olivia Park</h4>
+                    <p class="text-muted">Digital Art</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" class="rounded-circle mb-3" width="150" height="150" alt="Artist 4">
+                    <h4>James Wilson</h4>
+                    <p class="text-muted">Abstract Painting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Gallery Highlights</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1578301978163-9e177c9fcc8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" class="img-fluid gallery-img rounded" alt="Gallery Image 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" class="img-fluid gallery-img rounded" alt="Gallery Image 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1736&q=80" class="img-fluid gallery-img rounded" alt="Gallery Image 3">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1578301978018-2775755d29e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" class="img-fluid gallery-img rounded" alt="Gallery Image 4">
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1578926375607-1c5dfe48e9a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" class="img-fluid gallery-img rounded" alt="Gallery Image 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5 bg-light" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>About Our Gallery</h2>
+                    <p>Founded in 2005, the Modern Art Gallery has been at the forefront of showcasing contemporary art from around the world. Our mission is to provide a platform for both emerging and established artists to display their work and engage with art enthusiasts.</p>
+                    <p>With over 10,000 square feet of exhibition space, we host rotating exhibitions throughout the year, featuring a diverse range of mediums including painting, sculpture, digital art, and mixed media installations.</p>
+                    <p>Our gallery also offers educational programs, artist talks, and workshops to foster a deeper appreciation for contemporary art.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1600566752225-3bdc6f365b47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" class="img-fluid rounded" alt="Gallery Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Visit Us</h4>
+                    <p><strong>Address:</strong> 123 Art Avenue, Creative District, New York, NY 10001</p>
+                    <p><strong>Hours:</strong> Tuesday-Sunday: 10AM-6PM (Closed Mondays)</p>
+                    <p><strong>Phone:</strong> (212) 555-1234</p>
+                    <p><strong>Email:</strong> info@modernartgallery.com</p>
+                    
+                    <div class="mt-4">
+                        <h4>Follow Us</h4>
+                        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-facebook"></i> Facebook</a>
+                        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-instagram"></i> Instagram</a>
+                        <a href="#" class="btn btn-outline-dark"><i class="bi bi-twitter"></i> Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Modern Art Gallery</h5>
+                    <p>Celebrating contemporary creativity since 2005.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#exhibitions" class="text-white">Exhibitions</a></li>
+                        <li><a href="#artists" class="text-white">Artists</a></li>
+                        <li><a href="#about" class="text-white">About</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <button type="submit" class="btn btn-light">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <p>&copy; 2023 Modern Art Gallery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </body>
 </html>
